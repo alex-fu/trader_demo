@@ -11,11 +11,19 @@ CSem sem(0);
 
 int main(){
     // 前置地址
+    // Mo ni address
     char tradeFront[]="tcp://180.168.102.230:26205";
-
     TThostFtdcBrokerIDType brokerId = "1001";
     TThostFtdcUserIDType userId = "00000054";
     TThostFtdcPasswordType passwd = "123456";
+
+
+    // True trader address
+//    char tradeFront[]="tcp://180.168.212.75:26205";
+//    TThostFtdcBrokerIDType brokerId = "8000";
+//    TThostFtdcUserIDType userId = "00000054";
+//    TThostFtdcPasswordType passwd = "123456";
+
 
 	CThostFtdcTraderApi* pUserApi = CThostFtdcTraderApi::CreateFtdcTraderApi();
 	CtpTraderSpi* pUserSpi = new CtpTraderSpi(pUserApi);
